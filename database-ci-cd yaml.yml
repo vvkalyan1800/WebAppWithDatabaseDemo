@@ -245,7 +245,7 @@ stages:
       inputs:
         deploymentScope: 'Resource Group'
         azureResourceManagerConnection: 'Free Trial (c806e88d-51e8-44aa-ba5c-ab455d5bbfe6)'
-        subscriptionId: '4b72ed90-7ca3-4e76-8d0f-31a2c0bee7a3'
+        subscriptionId: 'c806e88d-51e8-44aa-ba5c-ab455d5bbfe6'
         action: 'Create Or Update Resource Group'
         resourceGroupName: '$(ResourceGroupName)'
         location: 'West Europe'
