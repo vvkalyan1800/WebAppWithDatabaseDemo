@@ -167,7 +167,7 @@ stages:
   dependsOn: Build_Stage
   variables:
     azureSubscription: 'Free Trial (c806e88d-51e8-44aa-ba5c-ab455d5bbfe6)' # couldn't be referenced
-    ResourceGroupName: '$(Prefix)-$(Release.EnvironmentName)-$(UniqueId)-RG'
+    ResourceGroupName: 'webappDBDemo-RG'
     Database.Admin: 'houssem'
     Database.Password: '@Aa123456' # to be secured in Key Vault
     Database.Name: 'EmployeesDB'
