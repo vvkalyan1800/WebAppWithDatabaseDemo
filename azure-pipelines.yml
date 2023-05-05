@@ -143,7 +143,7 @@ stages:
   displayName: Create & Deploy to Dev
   dependsOn: Build_Stage
   variables:
-    azureSubscription: 'Free Trial (ed9530d2-846d-4257-9fcd-f95214748d53)' # couldn't be referenced
+    azureSubscription: 'Free Trial (0ed5b7b4-ad76-449d-8f5d-a79944c2eaa5)' # couldn't be referenced
     ResourceGroupName: 'webappDBDemo-RG'
     Database.Admin: 'houssem'
     Database.Password: '@Aa123456' # to be secured in Key Vault
@@ -174,7 +174,7 @@ stages:
       displayName: Validate ARM templates
       enabled: ${{ parameters.runCompletePipeline }}
       inputs:
-        azureSubscription: 'Free Trial (ed9530d2-846d-4257-9fcd-f95214748d53)'
+        azureSubscription: 'Free Trial (0ed5b7b4-ad76-449d-8f5d-a79944c2eaa5)'
         action: 'Create Or Update Resource Group'
         resourceGroupName: '$(ResourceGroupName)'
         location: 'West Europe'
@@ -199,7 +199,7 @@ stages:
       displayName: Preview Template Changes (What-If)
       inputs:
         workingDirectory: $(System.DefaultWorkingDirectory)/arm/
-        azureSubscription: 'Free Trial (ed9530d2-846d-4257-9fcd-f95214748d53)'
+        azureSubscription: 'Free Trial (0ed5b7b4-ad76-449d-8f5d-a79944c2eaa5)'
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: 'az deployment group what-if --resource-group $(ResourceGroupName) --name rollout01 --template-file  WebSiteSQLDatabase.json --parameters WebSiteSQLDatabase.parameters.json'
@@ -209,8 +209,8 @@ stages:
       displayName: Deploy ARM templates
       inputs:
         deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: 'Free Trial (ed9530d2-846d-4257-9fcd-f95214748d53)'
-        subscriptionId: 'ed9530d2-846d-4257-9fcd-f95214748d53'
+        azureResourceManagerConnection: 'Free Trial (0ed5b7b4-ad76-449d-8f5d-a79944c2eaa5)'
+        subscriptionId: '0ed5b7b4-ad76-449d-8f5d-a79944c2eaa5'
         action: 'Create Or Update Resource Group'
         resourceGroupName: '$(ResourceGroupName)'
         location: 'West Europe'
