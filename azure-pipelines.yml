@@ -243,7 +243,7 @@ stages:
     - task: AzureRmWebAppDeployment@3
       displayName: Deploy WebApp to Azure
       inputs:
-        azureSubscription: 'Free Trial (ed9530d2-846d-4257-9fcd-f95214748d53)'
+        azureSubscription: 'Free Trial (0ed5b7b4-ad76-449d-8f5d-a79944c2eaa5)'
         appType: 'app'
         WebAppName: '$(WebAppName)'
         Package: '$(System.DefaultWorkingDirectory)/drop/WebApp.zip'
@@ -262,7 +262,7 @@ stages:
     - task: SqlAzureDacpacDeployment@1
       displayName: Deploy DacPac to SQL Azure
       inputs:
-        azureSubscription: 'Free Trial (ed9530d2-846d-4257-9fcd-f95214748d53)'
+        azureSubscription: 'Free Trial (0ed5b7b4-ad76-449d-8f5d-a79944c2eaa5)'
         AuthenticationType: 'server'
         ServerName: '$(SqlServerName).database.windows.net,1433'
         DatabaseName: '$(Database.Name)'
